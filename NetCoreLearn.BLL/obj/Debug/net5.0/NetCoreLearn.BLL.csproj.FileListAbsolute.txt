@@ -1,0 +1,12 @@
+D:\Project\C#\NetCoreLearn\NetCoreLearn.BLL\bin\Debug\net5.0\NetCoreLearn.BLL.deps.json
+D:\Project\C#\NetCoreLearn\NetCoreLearn.BLL\bin\Debug\net5.0\NetCoreLearn.BLL.dll
+D:\Project\C#\NetCoreLearn\NetCoreLearn.BLL\bin\Debug\net5.0\ref\NetCoreLearn.BLL.dll
+D:\Project\C#\NetCoreLearn\NetCoreLearn.BLL\bin\Debug\net5.0\NetCoreLearn.BLL.pdb
+D:\Project\C#\NetCoreLearn\NetCoreLearn.BLL\obj\Debug\net5.0\NetCoreLearn.BLL.csproj.AssemblyReference.cache
+D:\Project\C#\NetCoreLearn\NetCoreLearn.BLL\obj\Debug\net5.0\NetCoreLearn.BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project\C#\NetCoreLearn\NetCoreLearn.BLL\obj\Debug\net5.0\NetCoreLearn.BLL.AssemblyInfoInputs.cache
+D:\Project\C#\NetCoreLearn\NetCoreLearn.BLL\obj\Debug\net5.0\NetCoreLearn.BLL.AssemblyInfo.cs
+D:\Project\C#\NetCoreLearn\NetCoreLearn.BLL\obj\Debug\net5.0\NetCoreLearn.BLL.csproj.CoreCompileInputs.cache
+D:\Project\C#\NetCoreLearn\NetCoreLearn.BLL\obj\Debug\net5.0\NetCoreLearn.BLL.dll
+D:\Project\C#\NetCoreLearn\NetCoreLearn.BLL\obj\Debug\net5.0\ref\NetCoreLearn.BLL.dll
+D:\Project\C#\NetCoreLearn\NetCoreLearn.BLL\obj\Debug\net5.0\NetCoreLearn.BLL.pdb
