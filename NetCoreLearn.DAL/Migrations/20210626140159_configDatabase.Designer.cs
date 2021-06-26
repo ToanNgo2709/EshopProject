@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NetCoreLearn.DAL.EF;
 
 namespace NetCoreLearn.DAL.Migrations
 {
     [DbContext(typeof(EshopDbContext))]
-    partial class EshopDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210626140159_configDatabase")]
+    partial class configDatabase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -99,13 +101,6 @@ namespace NetCoreLearn.DAL.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles");
-
-                    b.HasData(
-                        new
-                        {
-                            UserId = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de"),
-                            RoleId = new Guid("8d04dce2-969a-435d-bba4-df3f325983dc")
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<System.Guid>", b =>
@@ -189,16 +184,6 @@ namespace NetCoreLearn.DAL.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("8d04dce2-969a-435d-bba4-df3f325983dc"),
-                            ConcurrencyStamp = "a3d3753b-d903-4435-8597-fcaf84020087",
-                            Description = "Administrator role",
-                            Name = "admin",
-                            NormalizedName = "admin"
-                        });
                 });
 
             modelBuilder.Entity("NetCoreLearn.DAL.Models.AppUser", b =>
@@ -278,27 +263,6 @@ namespace NetCoreLearn.DAL.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de"),
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "e25bd2da-91cf-46e0-8258-c73a25a662b8",
-                            Dob = new DateTime(2020, 1, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "toan.international@gmail.com",
-                            EmailConfirmed = true,
-                            FirstName = "Toan",
-                            LastName = "Ngo",
-                            LockoutEnabled = false,
-                            NormalizedEmail = "toan.international@gmail.com",
-                            NormalizedUserName = "admin",
-                            PasswordHash = "AQAAAAEAACcQAAAAEMrraRE/1jJjmzMNU+3UlXADE/qWT4e4BLMXdWQMb5Z5HQHz3OjEnpx9pxOqohPxXg==",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "",
-                            TwoFactorEnabled = false,
-                            UserName = "admin"
-                        });
                 });
 
             modelBuilder.Entity("NetCoreLearn.DAL.Models.Cart", b =>
@@ -546,7 +510,7 @@ namespace NetCoreLearn.DAL.Migrations
                     b.Property<DateTime>("OrderDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2021, 6, 26, 21, 9, 38, 541, DateTimeKind.Local).AddTicks(1599));
+                        .HasDefaultValue(new DateTime(2021, 6, 26, 21, 1, 57, 628, DateTimeKind.Local).AddTicks(3949));
 
                     b.Property<string>("ShipAddress")
                         .IsRequired()
@@ -640,7 +604,7 @@ namespace NetCoreLearn.DAL.Migrations
                         new
                         {
                             Id = 1,
-                            DateCreated = new DateTime(2021, 6, 26, 21, 9, 38, 583, DateTimeKind.Local).AddTicks(3930),
+                            DateCreated = new DateTime(2021, 6, 26, 21, 1, 57, 663, DateTimeKind.Local).AddTicks(5872),
                             OriginalPrice = 100000m,
                             Price = 200000m,
                             Stock = 0,
