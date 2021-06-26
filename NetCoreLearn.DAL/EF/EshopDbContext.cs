@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NetCoreLearn.DAL.Configuration;
+using NetCoreLearn.DAL.Extension;
 using NetCoreLearn.DAL.Models;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,7 @@ namespace NetCoreLearn.DAL.EF
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            //Configuration using Fluent Api
             modelBuilder.ApplyConfiguration(new AppConfigConfiguration());
             modelBuilder.ApplyConfiguration(new CartConfiguration());
             modelBuilder.ApplyConfiguration(new CategoryConfiguration());
@@ -31,6 +33,11 @@ namespace NetCoreLearn.DAL.EF
             modelBuilder.ApplyConfiguration(new ProductTranslationConfiguration());
             modelBuilder.ApplyConfiguration(new PromotionConfiguration());
             modelBuilder.ApplyConfiguration(new TransactionConfiguration());
+
+            //Data Seeding
+            //method 1: modelBuilder.Entity<Object>.HasData(new Object);
+            modelBuilder.Seed();
+
             base.OnModelCreating(modelBuilder);
 
         }
