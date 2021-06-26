@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreLearn", "NetCoreLearn.csproj", "{B85DF6D7-DAF7-4814-BBC0-1CA564C30632}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreLearn", "NetCoreLearn.csproj", "{B85DF6D7-DAF7-4814-BBC0-1CA564C30632}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreLearn.DAL", "..\NetCoreLearn.DAL\NetCoreLearn.DAL.csproj", "{D8CA4F44-259A-46AE-A647-6E03825A0528}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreLearn.BLL", "..\NetCoreLearn.BLL\NetCoreLearn.BLL.csproj", "{10AAEC36-B2F9-4901-BD71-11BB1A9BD2D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{B85DF6D7-DAF7-4814-BBC0-1CA564C30632}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B85DF6D7-DAF7-4814-BBC0-1CA564C30632}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B85DF6D7-DAF7-4814-BBC0-1CA564C30632}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8CA4F44-259A-46AE-A647-6E03825A0528}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8CA4F44-259A-46AE-A647-6E03825A0528}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8CA4F44-259A-46AE-A647-6E03825A0528}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8CA4F44-259A-46AE-A647-6E03825A0528}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10AAEC36-B2F9-4901-BD71-11BB1A9BD2D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10AAEC36-B2F9-4901-BD71-11BB1A9BD2D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10AAEC36-B2F9-4901-BD71-11BB1A9BD2D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10AAEC36-B2F9-4901-BD71-11BB1A9BD2D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
