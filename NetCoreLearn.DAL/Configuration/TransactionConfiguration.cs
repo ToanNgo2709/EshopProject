@@ -19,6 +19,9 @@ namespace NetCoreLearn.DAL.Configuration
             builder.Property(t => t.Id)
                 .UseIdentityColumn();
 
+            builder.HasOne(t => t.AppUser)
+                .WithMany(a => a.Transactions)
+                .HasForeignKey(t => t.UserId);
         }
     }
 }

@@ -38,6 +38,10 @@ namespace NetCoreLearn.DAL.Configuration
             builder.Property(x => x.ShipPhoneNumber)
                 .IsRequired()
                 .HasMaxLength(200);
+
+            builder.HasOne(o => o.AppUser)
+                .WithMany(a => a.Orders)
+                .HasForeignKey(o => o.UserId);
         }
     }
 }

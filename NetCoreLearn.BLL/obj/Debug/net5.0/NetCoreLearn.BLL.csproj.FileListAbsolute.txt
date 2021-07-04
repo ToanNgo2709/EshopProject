@@ -10,3 +10,10 @@ D:\Project\C#\NetCoreLearn\NetCoreLearn.BLL\obj\Debug\net5.0\NetCoreLearn.BLL.cs
 D:\Project\C#\NetCoreLearn\NetCoreLearn.BLL\obj\Debug\net5.0\NetCoreLearn.BLL.dll
 D:\Project\C#\NetCoreLearn\NetCoreLearn.BLL\obj\Debug\net5.0\ref\NetCoreLearn.BLL.dll
 D:\Project\C#\NetCoreLearn\NetCoreLearn.BLL\obj\Debug\net5.0\NetCoreLearn.BLL.pdb
+D:\Project\C#\NetCoreLearn\NetCoreLearn.BLL\bin\Debug\net5.0\NetCoreLearn.DAL.dll
+D:\Project\C#\NetCoreLearn\NetCoreLearn.BLL\bin\Debug\net5.0\NetCoreLearn.Utilities.dll
+D:\Project\C#\NetCoreLearn\NetCoreLearn.BLL\bin\Debug\net5.0\NetCoreLearn.DAL.pdb
+D:\Project\C#\NetCoreLearn\NetCoreLearn.BLL\bin\Debug\net5.0\NetCoreLearn.Utilities.pdb
+D:\Project\C#\NetCoreLearn\NetCoreLearn.BLL\obj\Debug\net5.0\NetCoreLearn.BLL.csproj.CopyComplete
+D:\Project\C#\NetCoreLearn\NetCoreLearn.BLL\bin\Debug\net5.0\NetCoreLearn.ViewModel.dll
+D:\Project\C#\NetCoreLearn\NetCoreLearn.BLL\bin\Debug\net5.0\NetCoreLearn.ViewModel.pdb
