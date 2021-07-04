@@ -13,5 +13,6 @@ namespace NetCoreLearn.BLL.Catalog.Products
     {
         public Task<PageResult<ProductViewModel>> GetAllByCategoryId(GetPublicProductPagingRequest  request);
 
+        Task<List<ProductViewModel>> GetAll();
     }
 }
