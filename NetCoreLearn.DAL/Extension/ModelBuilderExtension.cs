@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using NetCoreLearn.DAL.Enums;
 using NetCoreLearn.DAL.Models;
 using System;
@@ -40,7 +41,7 @@ namespace NetCoreLearn.DAL.Extension
             modelBuilder.Entity<Category>().HasData(
                 new Category()
                 {
-                    Id  = 1,
+                    Id = 1,
                     IsShowOnHome = true,
                     ParentId = null,
                     SortOrder = 1,
@@ -58,15 +59,15 @@ namespace NetCoreLearn.DAL.Extension
 
                 );
             modelBuilder.Entity<CategoryTranslation>().HasData(
-                 new CategoryTranslation() 
-                 { 
-                    Id = 1,
-                    CategoryId = 1,
-                    Name = "Áo Nam",
-                    LanguageId = "vn-VN",
-                    SeoAlias = "ao-nam",
-                    SeoDescription = "Sản phẩm áo thời trang dành cho nam",
-                    SeoTitle = "Sản phẩm áo thời trang dành cho nam"
+                 new CategoryTranslation()
+                 {
+                     Id = 1,
+                     CategoryId = 1,
+                     Name = "Áo Nam",
+                     LanguageId = "vn-VN",
+                     SeoAlias = "ao-nam",
+                     SeoDescription = "Sản phẩm áo thời trang dành cho nam",
+                     SeoTitle = "Sản phẩm áo thời trang dành cho nam"
                  },
                  new CategoryTranslation()
                  {
@@ -115,8 +116,8 @@ namespace NetCoreLearn.DAL.Extension
                 );
 
             modelBuilder.Entity<ProductTranslation>().HasData(
-                new ProductTranslation() 
-                { 
+                new ProductTranslation()
+                {
                     Id = 1,
                     ProductId = 1,
                     Name = "Áo sơ mi trắng việt tiến",
@@ -144,12 +145,48 @@ namespace NetCoreLearn.DAL.Extension
 
             modelBuilder.Entity<ProductInCategory>().HasData(
                     new ProductInCategory()
-                    { 
+                    {
                         CategoryId = 1,
                         ProductId = 1
                     }
 
                 );
+
+
+            //Identity User Data Seeding
+            // any guid
+            var roleId = new Guid("8D04DCE2-969A-435D-BBA4-DF3F325983DC");
+            var adminId = new Guid("69BD714F-9576-45BA-B5B7-F00649BE00DE");
+
+            modelBuilder.Entity<AppRole>().HasData(new AppRole
+            {
+                Id = roleId,
+                Name = "admin",
+                NormalizedName = "admin",
+                Description = "Administrator role"
+            });
+
+            var hasher = new PasswordHasher<AppUser>();
+            modelBuilder.Entity<AppUser>().HasData(new AppUser
+            {
+                Id = adminId,
+                UserName = "admin",
+                NormalizedUserName = "admin",
+                Email = "toan.international@gmail.com",
+                NormalizedEmail = "toan.international@gmail.com",
+                EmailConfirmed = true,
+                PasswordHash = hasher.HashPassword(null, "Abcd1234$"),
+                SecurityStamp = string.Empty,
+                FirstName = "Toan",
+                LastName = "Ngo",
+                Dob = new DateTime(2020, 01, 31)
+            });
+
+            modelBuilder.Entity<IdentityUserRole<Guid>>().HasData(new IdentityUserRole<Guid>
+            {
+                RoleId = roleId,
+                UserId = adminId
+            });
         }
     }
 }

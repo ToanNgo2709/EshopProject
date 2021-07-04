@@ -22,6 +22,10 @@ namespace NetCoreLearn.DAL.Configuration
             builder.HasOne(p => p.Product)
                 .WithMany(c => c.Carts)
                 .HasForeignKey(c => c.ProductId);
+
+            builder.HasOne(c => c.AppUser)
+                .WithMany(a => a.Carts)
+                .HasForeignKey(c => c.UserId);
         }
     }
 }
