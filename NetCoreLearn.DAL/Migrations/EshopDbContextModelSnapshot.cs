@@ -194,7 +194,7 @@ namespace NetCoreLearn.DAL.Migrations
                         new
                         {
                             Id = new Guid("8d04dce2-969a-435d-bba4-df3f325983dc"),
-                            ConcurrencyStamp = "a3d3753b-d903-4435-8597-fcaf84020087",
+                            ConcurrencyStamp = "e38158aa-e91e-4c9c-8eff-71d0f50a64e5",
                             Description = "Administrator role",
                             Name = "admin",
                             NormalizedName = "admin"
@@ -284,7 +284,7 @@ namespace NetCoreLearn.DAL.Migrations
                         {
                             Id = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "e25bd2da-91cf-46e0-8258-c73a25a662b8",
+                            ConcurrencyStamp = "da5bcf8c-e891-4d23-a774-b95f8f0ec2a9",
                             Dob = new DateTime(2020, 1, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "toan.international@gmail.com",
                             EmailConfirmed = true,
@@ -293,7 +293,7 @@ namespace NetCoreLearn.DAL.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "toan.international@gmail.com",
                             NormalizedUserName = "admin",
-                            PasswordHash = "AQAAAAEAACcQAAAAEMrraRE/1jJjmzMNU+3UlXADE/qWT4e4BLMXdWQMb5Z5HQHz3OjEnpx9pxOqohPxXg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEErtNPGoKOdT3b42vMEs4MRnmbwymLjFdw80EJ0D0lgjqUIQvHhkHsBWegy3NSup6g==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
@@ -546,7 +546,7 @@ namespace NetCoreLearn.DAL.Migrations
                     b.Property<DateTime>("OrderDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2021, 6, 26, 21, 9, 38, 541, DateTimeKind.Local).AddTicks(1599));
+                        .HasDefaultValue(new DateTime(2021, 7, 3, 15, 19, 25, 96, DateTimeKind.Local).AddTicks(4906));
 
                     b.Property<string>("ShipAddress")
                         .IsRequired()
@@ -640,12 +640,52 @@ namespace NetCoreLearn.DAL.Migrations
                         new
                         {
                             Id = 1,
-                            DateCreated = new DateTime(2021, 6, 26, 21, 9, 38, 583, DateTimeKind.Local).AddTicks(3930),
+                            DateCreated = new DateTime(2021, 7, 3, 15, 19, 25, 138, DateTimeKind.Local).AddTicks(34),
                             OriginalPrice = 100000m,
                             Price = 200000m,
                             Stock = 0,
                             ViewCount = 0
                         });
+                });
+
+            modelBuilder.Entity("NetCoreLearn.DAL.Models.ProductImage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:IdentityIncrement", 1)
+                        .HasAnnotation("SqlServer:IdentitySeed", 1)
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Caption")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long>("FileSize")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("ImagePath")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<bool>("IsDefault")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SortOrder")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ProductImage");
                 });
 
             modelBuilder.Entity("NetCoreLearn.DAL.Models.ProductInCategory", b =>
@@ -950,6 +990,17 @@ namespace NetCoreLearn.DAL.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("NetCoreLearn.DAL.Models.ProductImage", b =>
+                {
+                    b.HasOne("NetCoreLearn.DAL.Models.Product", "Product")
+                        .WithMany("ProductImages")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("NetCoreLearn.DAL.Models.ProductInCategory", b =>
                 {
                     b.HasOne("NetCoreLearn.DAL.Models.Category", "Category")
@@ -1032,6 +1083,8 @@ namespace NetCoreLearn.DAL.Migrations
                     b.Navigation("Carts");
 
                     b.Navigation("OrderDetails");
+
+                    b.Navigation("ProductImages");
 
                     b.Navigation("ProductInCategories");
 

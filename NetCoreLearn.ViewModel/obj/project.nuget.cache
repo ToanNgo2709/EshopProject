@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "PeBe1TompO1pj97uU1Dy7LK0ETZtZY41kRnGER8aeTgyV/HJ3GNJ4a/a0VMpjNa1QrTYZ0PmMrt+Igk21kX+GQ==",
+  "success": true,
+  "projectFilePath": "D:\\Project\\C#\\NetCoreLearn\\NetCoreLearn.ViewModel\\NetCoreLearn.ViewModel.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ngoto\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.7\\microsoft.aspnetcore.http.features.5.0.7.nupkg.sha512",
+    "C:\\Users\\ngoto\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\ngoto\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

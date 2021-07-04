@@ -35,7 +35,7 @@ namespace NetCoreLearn.DAL.EF
             modelBuilder.ApplyConfiguration(new ProductTranslationConfiguration());
             modelBuilder.ApplyConfiguration(new PromotionConfiguration());
             modelBuilder.ApplyConfiguration(new TransactionConfiguration());
-
+            modelBuilder.ApplyConfiguration(new ProductImageConfiguration());
 
             //identity configuratin
             modelBuilder.ApplyConfiguration(new AppUserConfiguration());
@@ -69,6 +69,7 @@ namespace NetCoreLearn.DAL.EF
         public DbSet<ProductTranslation> ProductTranslations { get; set; }
         public DbSet<Promotion> Promotions { get; set; }
         public DbSet<Transaction> Transactions { get; set; }
+        public DbSet<ProductImage> ProductImages { get; set; }
 
     }
 }
