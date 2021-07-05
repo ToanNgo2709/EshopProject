@@ -13,7 +13,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreLearn.Utilities", ".
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreLearn.ViewModel", "..\NetCoreLearn.ViewModel\NetCoreLearn.ViewModel.csproj", "{EED53EC8-3535-4818-873C-B438E05A8C23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreLearn.BackendApi", "..\NetCoreLearn.BackendApi\NetCoreLearn.BackendApi.csproj", "{E29A8256-B67B-44B8-ACFF-60EE5426B466}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreLearn.BackendApi", "..\NetCoreLearn.BackendApi\NetCoreLearn.BackendApi.csproj", "{E29A8256-B67B-44B8-ACFF-60EE5426B466}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Infrastructure", "1.Infrastructure", "{39593AFE-BAED-49FB-95A3-4912B58CB575}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Domain", "2.Domain", "{07FA4168-3FEB-4907-B220-0ABD2B05F81F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Hosts", "3.Hosts", "{330CF510-8DB6-48BF-9F27-98E4F7CB8925}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0.SolutionItems", "0.SolutionItems", "{D13FCE47-D6C0-4DEF-A903-82A329AA8250}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,6 +56,14 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B85DF6D7-DAF7-4814-BBC0-1CA564C30632} = {330CF510-8DB6-48BF-9F27-98E4F7CB8925}
+		{D8CA4F44-259A-46AE-A647-6E03825A0528} = {07FA4168-3FEB-4907-B220-0ABD2B05F81F}
+		{10AAEC36-B2F9-4901-BD71-11BB1A9BD2D8} = {07FA4168-3FEB-4907-B220-0ABD2B05F81F}
+		{118045BB-7CB0-4F2D-9DE3-D573A0C1C480} = {39593AFE-BAED-49FB-95A3-4912B58CB575}
+		{EED53EC8-3535-4818-873C-B438E05A8C23} = {39593AFE-BAED-49FB-95A3-4912B58CB575}
+		{E29A8256-B67B-44B8-ACFF-60EE5426B466} = {330CF510-8DB6-48BF-9F27-98E4F7CB8925}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CB08A5B4-392B-4331-82F5-C5F4BC4B731F}
